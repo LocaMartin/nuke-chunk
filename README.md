@@ -14,8 +14,14 @@ pwd
 ```
 add `nuke-chunk.sh` file path to shell configuration file e.g `.bashrc` or `.zshrc` ( you can check your shell by this command "`echo $0`" )
 
-```echo "alias nuke-chunk="/<path to nuke-chunk.sh file>/nuke-chunk.sh" >> ~/.zshrc```
-```source ~/.zshrc```
+```
+echo "alias nuke-chunk="/<path to nuke-chunk.sh file>/nuke-chunk.sh" >> ~/.zshrc
+```
+
+```
+source ~/.zshrc
+```
+
 #### or
 ```
 echo "alias nuke-chunk="/<path to nuke-chunk.sh file>/nuke-chunk.sh" >> ~/.bashrc
@@ -49,10 +55,10 @@ nuke-chunk -twek 86
 ```
 #### Flags:
 
-`-tag` :`<tags>`
-`-t` : `<nuclei template>`
-`-pr`: prints results
-`-twek`: `<number of domain you system os/shell/system can test at once>` e.g 85
+- `-tag` :`<tags>`
+- `-t` : `<nuclei template>`
+- `-pr`: prints results
+- `-twek`: `<number of domain you system os/shell/system can test at once>` e.g 85
 
 <hr>
 
@@ -87,6 +93,10 @@ nuke-chunk -twek 85
 
 - scan results are automatically stored in `result/chunk_1_result.txt` directory
 - combine resuts of all chunks are automatically stored in `result/combine_result/chunkX.txt`
+- chunks are added added to `chunks` directory like:
+chunks/chunk_1.txt
+chunks/chunk_2.txt
+chunks/chunk_3.txt
 <hr>
 
 #### `nuke-chunk` Is a script to test domains using `nuclei` faster by spliting domain file in chunks and using `parallal` command to test all files at once.
